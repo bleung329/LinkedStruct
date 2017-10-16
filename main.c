@@ -1,6 +1,7 @@
 /*
 Brian Leung
 PD 10 Systems
+A Linked List
 */
 
 #include <stdio.h>
@@ -9,20 +10,16 @@ PD 10 Systems
 
 int main()
 {
-	node* blah = (node*) calloc(1,sizeof(node));
+	printf("My struct node is named blah.\n");
+	struct node* blah = (struct node*) calloc(1,sizeof(node));
 	blah->data = 3;
-	blah = insert_front(blah, 88);
-	blah = insert_front(blah, 1231);
-	//printf("%d\n", blah->data);
-	//blah->next = (node*) calloc(1,sizeof(node));
-//	brrt->data = 17;
-	//printf("%p\n", blah->next);
-//	printf("%p\n", brrt);
-//	printf("%p\n", blah);
-//	printf("%d\n", sizeof(node));
+	blah = insert_front(blah, 7821);
+	blah = insert_front(blah, 1218);
+	blah = insert_front(blah, 1337);
+	printf("I just inserted the values 3, 7821, 1218, and 1337\n");
+	printf("Im gonna print them now.\n");
 	print_list(blah);
 	free_list(blah);
-	printf("Free\n");
-	free(blah);
+	printf("I just freed them.\n");
 	return 0;
 }
